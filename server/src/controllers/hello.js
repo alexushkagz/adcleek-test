@@ -1,3 +1,6 @@
 exports.hello = (req, res) => {
-    res.send('Hello :) Try to use /cities or /meteo/{insee}')
+    res.status(404).json({
+        code: 404,
+        error: 'This page doesn\'t exist. Try to use /cities or /meteo/{insee}'
+    })
 }
